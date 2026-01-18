@@ -76,13 +76,13 @@ class SettingsActivity : AppCompatActivity() {
             BlockerService.refreshSettings(this)
             BlockerService.isBlocked = true
 
-            // Verificar que se guardó correctamente
+            // Verificar que se guardó correctamente (Logs limpios)
             val saved = prefs.getString("blocked_apps", "")
             android.util.Log.d("FocusShield", "Configuración guardada: '$saved'")
             android.util.Log.d("FocusShield", "Apps bloqueadas: ${BlockerService.blacklistedPackages}")
-            android.util.Log.d("FocusShield", "Sitios bloqueados: ${BlockerService.bannedSites}")
 
-            Toast.makeText(this, "Configuración Guardada y BLOQUEO ACTIVADO\nSitios: ${BlockerService.bannedSites.size}", Toast.LENGTH_LONG).show()
+            // Mensaje de éxito simplificado
+            Toast.makeText(this, "Configuración Guardada y BLOQUEO ACTIVADO", Toast.LENGTH_LONG).show()
             finish()
         }
     }
