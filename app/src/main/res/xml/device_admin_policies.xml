@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device-admin xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-policies>
+        <!--
+            Política básica necesaria para activar el administrador del dispositivo.
+            No requiere políticas específicas, solo necesitamos que sea administrador
+            para prevenir la desinstalación.
+        -->
+    </uses-policies>
+</device-admin>

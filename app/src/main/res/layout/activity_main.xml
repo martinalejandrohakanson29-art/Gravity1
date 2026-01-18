@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#FAFAFA">
+
+    <TextView
+        android:id="@+id/tvChallenge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Challenge Code: -----"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#D32F2F"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/etResponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Key from PC"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnUnlock"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="UNLOCK SYSTEM"
+        android:backgroundTint="#1976D2"
+        android:textColor="#FFFFFF"/>
+
+    <LinearLayout
+        android:id="@+id/layoutTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unlocking in..."
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00"
+            android:textSize="48sp"
+            android:layout_gravity="center"
+            android:textColor="#F57C00"/>
+
+        <Button
+            android:id="@+id/btnRegret"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CANCEL - I WANT TO STAY FOCUSED"
+            android:backgroundTint="#D32F2F"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+</LinearLayout>

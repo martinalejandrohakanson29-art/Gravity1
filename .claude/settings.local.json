@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./gradlew:*)",
+      "Bash(del \"c:\\\\Users\\\\marti\\\\AndroidStudioProjects\\\\Gravity1\\\\app\\\\src\\\\main\\\\java\\\\com\\\\example\\\\gravity1\\\\KeepAliveService.kt\")"
+    ]
+  }
+}
