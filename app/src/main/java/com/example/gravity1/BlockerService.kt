@@ -87,7 +87,7 @@ class BlockerService : AccessibilityService() {
         if (packageName == this.packageName || packageName == "com.android.systemui") return
 
         if (event.eventType == AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED) {
-
+            
             val className = event.className?.toString() ?: ""
 
             // Solo actuamos si estamos en horario de bloqueo
@@ -96,11 +96,11 @@ class BlockerService : AccessibilityService() {
                 // --- REGLA 1: AUTO-DEFENSA (Bloqueo Quirúrgico de Ajustes) ---
                 // Si intenta entrar a configurar notificaciones (para matar la app) -> BLOQUEAR
                 // Si intenta entrar a la info de la app (para forzar cierre) -> BLOQUEAR
-                if (packageName == "com.android.settings" &&
-                    (className.contains("AppNotificationSettingsActivity") ||
-                            className.contains("Notification") ||
-                            className.contains("InstalledAppDetails"))) {
-
+                if (packageName == "com.android.settings" && 
+                   (className.contains("AppNotificationSettingsActivity") || 
+                    className.contains("Notification") || 
+                    className.contains("InstalledAppDetails"))) {
+                    
                     Log.d("FocusShield", "🛡️ Intento de sabotaje detectado. Bloqueando.")
                     performGlobalAction(GLOBAL_ACTION_HOME)
                     Toast.makeText(this, "🛡️ Ajustes protegidos por Focus Shield", Toast.LENGTH_SHORT).show()
